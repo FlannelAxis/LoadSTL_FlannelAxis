@@ -10,6 +10,6 @@ File servoFile = ScriptingEngine.fileFromGit(
 CSG servo  = Vitamins.get(servoFile);
 
 FileUtil.write(
-						Paths.get(servoFile.getAbsolutePath()+"_new.stl"),
-						servo.toStlString()
-				);
+		Paths.get(servoFile.getAbsolutePath()+"_new.stl"),
+		servo.toStlString()
+);
