@@ -9,7 +9,6 @@ File servoFile = ScriptingEngine.fileFromGit(
 // Load the .CSG from the disk and cache it in memory
 CSG servo  = Vitamins.get(servoFile);
 
-FileUtil.write(
-		Paths.get(servoFile.getAbsolutePath()+"_new.stl"),
-		servo.toStlString()
-);
+FileUtil.write(Paths.get(servoFile.getAbsolutePath()+"_new.stl"),
+		servo.toStlString());
+return servo;
