@@ -9,7 +9,8 @@ File servoFile = ScriptingEngine.fileFromGit(
 	"BowlerStudioVitamins/stl/servo/smallservo.stl");
 // Load the .CSG from the disk and cache it in memory
 CSG servo  = Vitamins.get(servoFile);
-
-FileUtil.write(Paths.get(servoFile.getAbsolutePath()+"_new.stl"),
+String filename =ScriptingEngine.getWorkspace().getAbsolutePath()+"/CopiedStl.stl";
+FileUtil.write(Paths.get(filename),
 		servo.toStlString());
+println "STL EXPORT to "+filename
 return servo;
